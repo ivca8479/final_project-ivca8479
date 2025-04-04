@@ -16,7 +16,16 @@
  ******************************************************************************
  */
 
+
+/*
+ * @brief: Main program where application is run, is constantly processing from the terminal and uses all other
+ * files created in the program to interact with the user and the serial terminal
+ */
 #include <stdio.h>
+#include "usart.h"
+#include <string.h>
+#include "processor.h"
+#include "led.h"
 
 int main(void)
 {
@@ -24,9 +33,14 @@ int main(void)
 	 * Clocks: Processor = 48 Mhz. AHB = 48 MHz. APB = 24 MHz.
 	 *
 	 */
-
-	printf("Serial IO !\r\n"); // This will not print anything till UART is set correctly.
-
-    /* Loop forever */
-	for(;;);
+	// initialize peripherals
+	led_init();
+	usart_init();
+	printf(">> Welcome to SerialIO!\n\r");
+	// get rid of empty buffer used in getchar()
+	setvbuf(stdin, NULL, _IONBF, 0);
+	while (1) {
+		// program keeps on processing from the USART terminal
+		process_readline();
+	}
 }

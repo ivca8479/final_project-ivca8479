@@ -1,0 +1,9 @@
+../CMSIS/core_cm0.h:623:22:__NVIC_EnableIRQ	16	static,ignoring_inline_asm
+../CMSIS/core_cm0.h:714:22:__NVIC_ClearPendingIRQ	16	static
+../CMSIS/core_cm0.h:732:22:__NVIC_SetPriority	24	static
+../Src/usart.c:33:6:usart_init	8	static
+../Src/usart.c:80:6:USART2_IRQHandler	16	static
+../Src/usart.c:108:6:usart_transmit	16	static
+../Src/usart.c:120:6:usart_receive	16	static
+../Src/usart.c:134:5:__io_putchar	24	static
+../Src/usart.c:146:5:__io_getchar	16	static

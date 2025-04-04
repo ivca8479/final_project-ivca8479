@@ -1,0 +1,6 @@
+../Src/queue.c:14:6:queue_init	2
+../Src/queue.c:27:9:enqueue	3
+../Src/queue.c:48:10:dequeue	3
+../Src/queue.c:70:8:queue_length	1
+../Src/queue.c:74:9:queue_is_full	1
+../Src/queue.c:79:9:queue_is_empty	1

@@ -1,0 +1,8 @@
+"./Src/led.o"
+"./Src/main.o"
+"./Src/processor.o"
+"./Src/queue.o"
+"./Src/syscalls.o"
+"./Src/sysmem.o"
+"./Src/usart.o"
+"./Startup/startup_stm32f091rctx.o"
