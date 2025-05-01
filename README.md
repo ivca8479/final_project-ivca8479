@@ -40,9 +40,13 @@ For proper interaction use the putty serial terminal as I used a specific clear 
 which I am not sure will work on other serial terminals, and set it up in the following manner
 
 # USART Setup:
+
 Set baud Rate/Speed to 9600
+
 Set data to 8 bits
+
 Set Parity to Non
+
 Flow Controle XON/XOFF
 
 # SPI MFRC522 Setup:
