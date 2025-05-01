@@ -58,6 +58,10 @@ MISO Pin goes to D4 female header pin
 MOSI Pin goes to D5 female header pin
 Reset pin goes to the RESET female header pin which is one above the 3.3 V header pin
 
+# References 
+Dean Chapter 8
+https://github.com/miguelbalboa/rfid 
+Assignment 6 
 
 # Important Data Sheets:
 https://www.nxp.com/docs/en/data-sheet/MFRC522.pdf
