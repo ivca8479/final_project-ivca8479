@@ -46,7 +46,13 @@ I used my assignment #6 USART configuration, but changed it so the USART is at n
 
 To test my keyboard button presses, the serial terminal helped with that as I could easily detect with the arrow on the screen went based on my keyboard presses. Using the insert key to add items, I outputed on the main menu how many items their were, how many of each specific item there was, and how much the cost of each item alligned to. Removing items also comfirmed my item tracker was working as those items would indeed be deleted and the cost would reduce. 
 
-To test my state machine, I just focused on one state at a time before I implemented all of them together, doing that by not being able to change states when printing a menu. Once I knew each one worked individually based on the tests from earlier I could then add them together and had a reliable state machine.  
+To test my state machine, I just focused on one state at a time before I implemented all of them together, doing that by not being able to change states when printing a menu. Once I knew each one worked individually based on the tests from earlier I could then add them together and had a reliable state machine. 
+
+I covered happy cases by adding items where I knew they should be added and knowing how much they add to the overall cost, and seeing my arrows that point to the selected items correctly move throughout the screen to what they should
+
+I covered bounded cases by buying all the items and then removing them and see that the money added up to what was expected. If I tried to move my arrows outside the bounds of the number of cases this wouldn't be allowed, and going one up or one down would demonstrate my select variable didn't go outside the bounds.
+
+Buying everything and checking out resulted in the expected results.
 
 # USART Setup:
 
