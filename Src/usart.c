@@ -11,7 +11,7 @@
 /*
  * Settings used for the USART terminal
  */
-#define BAUD_RATE	(4800)
+#define BAUD_RATE	(9600)
 #define NINE_DATA_BITS	(1)
 #define ODD_PARITY		(1)
 #define TWO_STOP_BITS	(2)
@@ -47,12 +47,12 @@ void usart_init()
 	USART2->BRR = F_USART_CLOCK/BAUD_RATE;
 	// Enable Parity
 	MODIFY_FIELD(USART2->CR1, USART_CR1_PCE, ENABLE);
-	//	select odd parity
-	MODIFY_FIELD(USART2->CR1, USART_CR1_PS, ODD_PARITY);
+	//	select no parity
+	MODIFY_FIELD(USART2->CR1, USART_CR1_PS, 0);
 	// 9 data bits
 	MODIFY_FIELD(USART2->CR1, USART_CR1_M, 1);
 	// 1 Stop bit
-	MODIFY_FIELD(USART2->CR2, USART_CR2_STOP, TWO_STOP_BITS);
+	MODIFY_FIELD(USART2->CR2, USART_CR2_STOP, 1);
 
 	// Enable interrupt generation
 	MODIFY_FIELD(USART2->CR1, USART_CR1_TXEIE, 1);
@@ -104,6 +104,20 @@ void USART2_IRQHandler(void)
 		}
 	}
 }
+
+uint8_t usart_check_ready(uint8_t *ch)
+{
+	// Check the reciever has a character at least
+    if (!queue_is_empty(&receiver))
+    {
+    	// dequeue char from the reciever
+        *ch = dequeue(&receiver);
+        // return 1 if we found a char in reciever
+        return 1;
+    }
+    return 0;
+}
+
 
 void usart_transmit(const char *buf, int num_chars)
 {

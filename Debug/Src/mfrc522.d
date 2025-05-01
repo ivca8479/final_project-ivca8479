@@ -1,9 +1,9 @@
-Src/processor.o: ../Src/processor.c ../Src/processor.h ../Src/usart.h \
+Src/mfrc522.o: ../Src/mfrc522.c ../Src/mfrc522.h ../Src/spi.h \
  ../Inc/stm32f091xc.h ../CMSIS/core_cm0.h ../CMSIS/cmsis_version.h \
  ../CMSIS/cmsis_compiler.h ../CMSIS/cmsis_gcc.h ../Inc/system_stm32f0xx.h \
- ../Inc/utilities.h ../Src/queue.h ../Src/led.h
-../Src/processor.h:
-../Src/usart.h:
+ ../Inc/utilities.h ../Src/usart.h ../Src/queue.h
+../Src/mfrc522.h:
+../Src/spi.h:
 ../Inc/stm32f091xc.h:
 ../CMSIS/core_cm0.h:
 ../CMSIS/cmsis_version.h:
@@ -11,5 +11,5 @@ Src/processor.o: ../Src/processor.c ../Src/processor.h ../Src/usart.h \
 ../CMSIS/cmsis_gcc.h:
 ../Inc/system_stm32f0xx.h:
 ../Inc/utilities.h:
+../Src/usart.h:
 ../Src/queue.h:
-../Src/led.h:

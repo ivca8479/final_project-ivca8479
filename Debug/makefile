@@ -33,34 +33,34 @@ $(wildcard ../makefile.init) \
 $(wildcard ../makefile.targets) \
 
 
-BUILD_ARTIFACT_NAME := assignment6-serialio-ivca8479
+BUILD_ARTIFACT_NAME := final_project-ivca8479
 BUILD_ARTIFACT_EXTENSION := elf
 BUILD_ARTIFACT_PREFIX :=
 BUILD_ARTIFACT := $(BUILD_ARTIFACT_PREFIX)$(BUILD_ARTIFACT_NAME)$(if $(BUILD_ARTIFACT_EXTENSION),.$(BUILD_ARTIFACT_EXTENSION),)
 
 # Add inputs and outputs from these tool invocations to the build variables 
 EXECUTABLES += \
-assignment6-serialio-ivca8479.elf \
+final_project-ivca8479.elf \
 
 MAP_FILES += \
-assignment6-serialio-ivca8479.map \
+final_project-ivca8479.map \
 
 SIZE_OUTPUT += \
 default.size.stdout \
 
 OBJDUMP_LIST += \
-assignment6-serialio-ivca8479.list \
+final_project-ivca8479.list \
 
 
 # All Target
 all: main-build
 
 # Main-build Target
-main-build: assignment6-serialio-ivca8479.elf secondary-outputs
+main-build: final_project-ivca8479.elf secondary-outputs
 
 # Tool invocations
-assignment6-serialio-ivca8479.elf assignment6-serialio-ivca8479.map: $(OBJS) $(USER_OBJS) C:\Users\ivanc\OneDrive\Desktop\School\Spring\ 2025\PES\Workspace\assignment6-serialio-ivca8479\STM32F091RCTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "assignment6-serialio-ivca8479.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m0 -T"C:\Users\ivanc\OneDrive\Desktop\School\Spring 2025\PES\Workspace\assignment6-serialio-ivca8479\STM32F091RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="assignment6-serialio-ivca8479.map" -Wl,--gc-sections -static -L../Lib -Wl,--whole-archive -lstm_startup -Wl,--no-whole-archive --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+final_project-ivca8479.elf final_project-ivca8479.map: $(OBJS) $(USER_OBJS) C:\Users\ivanc\OneDrive\Desktop\School\Spring\ 2025\PES\Workspace\final_project-ivca8479\STM32F091RCTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "final_project-ivca8479.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m0 -T"C:\Users\ivanc\OneDrive\Desktop\School\Spring 2025\PES\Workspace\final_project-ivca8479\STM32F091RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="final_project-ivca8479.map" -Wl,--gc-sections -static -L../Lib -Wl,--whole-archive -lstm_startup -Wl,--no-whole-archive -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
@@ -69,14 +69,14 @@ default.size.stdout: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
 	@echo 'Finished building: $@'
 	@echo ' '
 
-assignment6-serialio-ivca8479.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "assignment6-serialio-ivca8479.list"
+final_project-ivca8479.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "final_project-ivca8479.list"
 	@echo 'Finished building: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) assignment6-serialio-ivca8479.elf assignment6-serialio-ivca8479.list assignment6-serialio-ivca8479.map default.size.stdout
+	-$(RM) default.size.stdout final_project-ivca8479.elf final_project-ivca8479.list final_project-ivca8479.map
 	-@echo ' '
 
 secondary-outputs: $(SIZE_OUTPUT) $(OBJDUMP_LIST)

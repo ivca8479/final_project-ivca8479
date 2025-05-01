@@ -1,0 +1,10 @@
+../Src/mfrc522.c:87:6:mfrc522_write	1
+../Src/mfrc522.c:96:9:mfrc522_read	1
+../Src/mfrc522.c:107:6:mfrc522_set_bitmask	1
+../Src/mfrc522.c:115:6:mfrc522_clear_bitmask	1
+../Src/mfrc522.c:123:6:mfrc522_reset	1
+../Src/mfrc522.c:129:6:mfrc522_antenna_on	2
+../Src/mfrc522.c:139:6:mfrc522_init	1
+../Src/mfrc522.c:154:9:mfrc522_to_card	14
+../Src/mfrc522.c:250:9:mfrc522_request	3
+../Src/mfrc522.c:269:9:mfrc522_is_card_present	1

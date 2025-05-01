@@ -1,7 +1,0 @@
-../Src/processor.c:26:6:echo	24	static
-../Src/processor.c:48:6:led	16	static
-../Src/processor.c:66:6:author	16	static
-../Src/processor.c:80:6:clear	16	static
-../Src/processor.c:114:6:command_handler	24	static
-../Src/processor.c:135:6:process_readline	1040	static
-../Src/processor.c:205:6:process_command	1088	static

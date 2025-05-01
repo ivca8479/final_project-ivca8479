@@ -1,7 +1,0 @@
-../Src/processor.c:26:6:echo	3
-../Src/processor.c:48:6:led	5
-../Src/processor.c:66:6:author	2
-../Src/processor.c:80:6:clear	1
-../Src/processor.c:114:6:command_handler	3
-../Src/processor.c:135:6:process_readline	12
-../Src/processor.c:205:6:process_command	11

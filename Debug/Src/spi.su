@@ -1,0 +1,2 @@
+../Src/spi.c:23:6:spi_init	8	static
+../Src/spi.c:70:9:SPI_Send_Receive_Byte	24	static

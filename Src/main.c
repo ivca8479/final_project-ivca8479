@@ -24,8 +24,13 @@
 #include <stdio.h>
 #include "usart.h"
 #include <string.h>
-#include "processor.h"
-#include "led.h"
+
+#include "cash_register.h"
+#include "mfrc522.h"
+#include "spi.h"
+#include "timing.h"
+
+
 
 int main(void)
 {
@@ -34,13 +39,21 @@ int main(void)
 	 *
 	 */
 	// initialize peripherals
-	led_init();
 	usart_init();
-	printf(">> Welcome to SerialIO!\n\r");
 	// get rid of empty buffer used in getchar()
 	setvbuf(stdin, NULL, _IONBF, 0);
-	while (1) {
-		// program keeps on processing from the USART terminal
-		process_readline();
+	// Initialize SPI communication
+	spi_init();
+
+	// Initialize systick for 100ms interrupts
+	systick_init();
+	// Intialize mfrc522 for SPI communication and detecting card
+	mfrc522_init();
+	// Print the initial menu
+	print_menu();
+	// Keep processing what the user inputs in the keyboard
+	while(1)
+	{
+		process_char();
 	}
 }

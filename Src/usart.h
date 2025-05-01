@@ -37,4 +37,16 @@ void usart_transmit(const char *buf, int num_chars);
  * @return: none
  */
 void usart_receive(int *buf);
+
+/**
+ * @brief Checks if data is available from the USART receive queue.
+ * If a character is available in the receiver queue, this function
+ * dequeues it and returns true else returns false
+ *
+ * @parameter: ch Pointer to a variable where the received character will be stored.
+ * @return 1 if data was available and stored in *ch, 0 if the queue was empty.
+ */
+
+uint8_t usart_check_ready(uint8_t *ch);
+
 #endif /* USART_H_ */

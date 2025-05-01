@@ -1,9 +1,8 @@
-Src/main.o: ../Src/main.c ../Src/usart.h ../Inc/stm32f091xc.h \
+Src/button.o: ../Src/button.c ../Src/button.h ../Inc/stm32f091xc.h \
  ../CMSIS/core_cm0.h ../CMSIS/cmsis_version.h ../CMSIS/cmsis_compiler.h \
  ../CMSIS/cmsis_gcc.h ../Inc/system_stm32f0xx.h ../Inc/utilities.h \
- ../Src/queue.h ../Src/cash_register.h ../Src/mfrc522.h ../Src/spi.h \
- ../Src/timing.h
-../Src/usart.h:
+ ../Src/processor.h ../Src/usart.h ../Src/queue.h ../Src/led.h
+../Src/button.h:
 ../Inc/stm32f091xc.h:
 ../CMSIS/core_cm0.h:
 ../CMSIS/cmsis_version.h:
@@ -11,8 +10,7 @@ Src/main.o: ../Src/main.c ../Src/usart.h ../Inc/stm32f091xc.h \
 ../CMSIS/cmsis_gcc.h:
 ../Inc/system_stm32f0xx.h:
 ../Inc/utilities.h:
+../Src/processor.h:
+../Src/usart.h:
 ../Src/queue.h:
-../Src/cash_register.h:
-../Src/mfrc522.h:
-../Src/spi.h:
-../Src/timing.h:
+../Src/led.h:

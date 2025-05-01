@@ -1,7 +1,7 @@
 /*
  * queue.h
  *
- *  Created on: Mar 24, 2025
+ *  Created on: March 24, 2025
  *      Author: ivanc
  *
  *
@@ -11,18 +11,16 @@
 #ifndef QUEUE_H_
 #define QUEUE_H_
 /*
-* Circular Queue Implementation in order to create and interface with USART and transmit messages
-*/
+ * @brief
+ * Circular Queue Implementation in order to create and interface with USART and transmit messages
+ */
 #include "stdint.h"
 #include "stdio.h"
 #include "stm32f091xc.h"
 #define CBFIFO_CAPACITY (256)
-//#define FULL	1
-//#define EMPTY (1)
-
 
 /*
- *
+ *CBFIFO struct to access pointer to data in a queue which helps with abstraction
  */
 typedef struct
 {
@@ -32,7 +30,7 @@ typedef struct
 	uint16_t length;
 	uint8_t full;
 	uint8_t empty;
-}CBFIFO;
+} CBFIFO;
 
 /*
  * @brief: function used to initialize a circular buffer.
@@ -68,6 +66,5 @@ uint8_t queue_is_full(CBFIFO *cbfifo);
  * @parameters: CBFIFO data structure we wish to check the empty condition
  */
 uint8_t queue_is_empty(CBFIFO *cbfifo);
-
 
 #endif /* QUEUE_H_ */

@@ -1,0 +1,15 @@
+../Src/cash_register.c:92:6:clear	8	static
+../Src/cash_register.c:97:6:process_char	16	static
+../Src/cash_register.c:254:6:movie_menu	16	static
+../Src/cash_register.c:306:6:add_ticket	16	static
+../Src/cash_register.c:360:6:remove_ticket	12	static
+../Src/cash_register.c:397:6:checkout_menu	24	static
+../Src/cash_register.c:459:6:main_menu	24	static
+../Src/cash_register.c:513:6:thank_you_screen	48	static
+../Src/cash_register.c:601:6:print_menu	8	static
+../Src/cash_register.c:624:6:add_item	8	static
+../Src/cash_register.c:650:6:remove_item	8	static
+../Src/cash_register.c:684:6:make_card_payment	16	static
+../Src/cash_register.c:718:6:cash_payment_menu	32	static
+../Src/cash_register.c:743:6:add_cash_given	8	static
+../Src/cash_register.c:825:6:remove_cash_given	8	static

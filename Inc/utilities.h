@@ -18,6 +18,7 @@
 #define ESF_GPIO_MODER_OUTPUT    (1)
 #define ESF_GPIO_MODER_ALT_FUNC  (2)
 #define ESF_GPIO_MODER_ANALOG    (3)
+#define MASK(x) 									(1 << x)
 
 #define UNUSED(X)  (void)X
 
