@@ -2,6 +2,9 @@
 [![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-2e0aaae1b6195c2367325f4f02e2d04e9abb55f0b24a779b69b11b9e10269abc.svg)](https://classroom.github.com/online_ide?assignment_repo_id=18822983&assignment_repo_type=AssignmentRepo)
 # ecen_5813_Final_Project
 
+#Link to Demo
+https://drive.google.com/file/d/1XAOuZE06hxkiYWjbgaSK4bI1GUB9dzZE/view?usp=drive_link 
+
 # Description
 In this Project I simulated a Cash register for a movie theater. 
 I implemented this as a state machine which uses usart for command processing,
