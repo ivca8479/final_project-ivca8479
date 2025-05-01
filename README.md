@@ -39,6 +39,15 @@ proximity with it.
 For proper interaction use the putty serial terminal as I used a specific clear command
 which I am not sure will work on other serial terminals, and set it up in the following manner
 
+# Testing
+In order to test this project, I dividided multiple peripherals up before I used them in the main cash register.c file. My way to test the MFRC522 was I created a function called detected_card(). I would run this in my Main.c file just initializing the SPI and mfrc522 and doing a polling test to see if when I had the card close to the sensor it would detect it and output "Card detected" onto the serial terminal. After I felt confident about the precision I implemented it in my cash_register.c file which worked great. 
+
+I used my assignment #6 USART configuration, but changed it so the USART is at no parity and 9600 as that is the default settings in putty and this made it faster for me to test my code. I know that this worked well based on assignment #6 feedback given to us, and used the queue I made in assignment #2 which had extensive testing done to it.
+
+To test my keyboard button presses, the serial terminal helped with that as I could easily detect with the arrow on the screen went based on my keyboard presses. Using the insert key to add items, I outputed on the main menu how many items their were, how many of each specific item there was, and how much the cost of each item alligned to. Removing items also comfirmed my item tracker was working as those items would indeed be deleted and the cost would reduce. 
+
+To test my state machine, I just focused on one state at a time before I implemented all of them together, doing that by not being able to change states when printing a menu. Once I knew each one worked individually based on the tests from earlier I could then add them together and had a reliable state machine.  
+
 # USART Setup:
 
 Set baud Rate/Speed to 9600
@@ -61,6 +70,9 @@ SCK pin goes to D3 female header pin on microcontroller
 MISO Pin goes to D4 female header pin
 MOSI Pin goes to D5 female header pin
 Reset pin goes to the RESET female header pin which is one above the 3.3 V header pin
+
+
+
 
 # References 
 Dean Chapter 8
